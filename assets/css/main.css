@@ -2209,7 +2209,7 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #5b6ba6;
+			border-color:#5b6ba6;
 		}
 
 	select {
@@ -4142,3 +4142,53 @@ input, select, textarea {
 		}
 
 	}
+
+    @keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+
+    div#slider { overflow: hidden; margin-top:-50px;}
+    div#slider figure img { width: 20%; float: left; }
+    div#slider figure { 
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 30s slidy infinite; 
+    }
+
+    /*
+    .slider {
+        width: auto;
+        height: ;
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;  
+    }
+    .slide {
+        width: 100%;
+        flex-shrink: 0;
+        height: 100%;
+        margin: 10px;
+        animation: 30s slidy infinite;
+    }
+
+        .slide img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    .slides > div {
+        scroll-snap-align: start;
+    }
+    */
