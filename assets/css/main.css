@@ -2413,6 +2413,8 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+        /*Padding was inherited as 0 from Line 20 but Shriya lost her cool. */
+        
 	}
 
 		.image img {
@@ -3789,7 +3791,11 @@ input, select, textarea {
 
 			.wrapper.spotlight .image {
 				border-radius: 100%;
-				margin: 0 3em 2em 0;
+                /*Original margin values 0 3em 2em 0 but Shriya lost her cool.*/
+                margin: 0 4em 2em -6em;
+                /*Original padding values were 0 but Shriya lost her cool.*/
+                padding-left: 1.5em;
+                padding-right: 1.5em;
 				width: 22em;
 				overflow: hidden;
 				-ms-flex: 1;
@@ -3801,7 +3807,10 @@ input, select, textarea {
 				}
 
 			.wrapper.spotlight .content {
-				width: 100%; /*Original was 100% but Shriya lost her cool.*/
+				width: 100%;
+                /*Original margin values were inherited from line20 but Shriya lost her cool.*/
+                margin-left:-4em;
+                margin-right:-4em;
 				-ms-flex: 2;
 			}
 
@@ -3814,7 +3823,8 @@ input, select, textarea {
 			}
 
 			.wrapper.spotlight:nth-child(2n - 1) .image {
-				margin: 0 0 2em 3em;
+                /*Original margin values 0 0 2em 3em but Shriya lost her cool.*/
+				margin: 0 -6em 2em 4em;
 			}
 
 			.wrapper.spotlight.style2 {
