@@ -4152,7 +4152,7 @@ input, select, textarea {
 		}
 
 	}
-
+    /* For 5 frames
     @keyframes slidy {
     0% { left: 0%; }
     20% { left: 0%; }
@@ -4164,12 +4164,26 @@ input, select, textarea {
     95% { left: -300%; }
     100% { left: -400%; }
     }
+    */
+    @keyframes slidy {
+    0% { left: 0%; }
+    10% { left: -0%; }
+    20% { left: -100%; }
+    30% { left: -200%; }
+    40% { left: -300%; }
+    50% { left: -400%; }
+    60% { left: -500%; }
+    70% { left: -600%; }
+    80% { left: -700%; }
+    90% { left: -800%; }
+    100% { left: -900%; }
+    }
 
     div#slider { overflow: hidden; margin-top:-50px;}
-    div#slider figure img { width: 20%; float: left; }
+    div#slider figure img { width: 10%; float: left; }
     div#slider figure { 
       position: relative;
-      width: 500%;
+      width: 1000%;
       margin: 0;
       left: 0;
       text-align: left;
