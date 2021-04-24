@@ -4167,16 +4167,26 @@ input, select, textarea {
     */
     @keyframes slidy {
     0% { left: 0%; }
-    10% { left: -0%; }
-    20% { left: -100%; }
-    30% { left: -200%; }
-    40% { left: -300%; }
-    50% { left: -400%; }
-    60% { left: -500%; }
-    70% { left: -600%; }
-    80% { left: -700%; }
-    90% { left: -800%; }
-    100% { left: -900%; }
+    7% { left: -0%; }
+    10% { left: -100%; }
+    17% { left: -100%; }
+    20% { left: -200%; }
+    27% { left: -200%; }
+    30% { left: -300%; }
+    37% { left: -300%; }
+    40% { left: -400%; }
+    47% { left: -400%; }
+    50% { left: -500%; }
+    57% { left: -500%; }
+    60% { left: -600%; }
+    67% { left: -600%; }
+    70% { left: -700%; }
+    77% { left: -700%; }
+    80% { left: -800%; }
+    87% { left: -800%; }
+    90% { left: -900%; }
+    97% { left: -900%; }
+    100% { left: -0%; }
     }
 
     div#slider { overflow: hidden; margin-top:-50px;}
@@ -4188,7 +4198,7 @@ input, select, textarea {
       left: 0;
       text-align: left;
       font-size: 0;
-      animation: 30s slidy infinite; 
+      animation: 40s slidy infinite; 
     }
 
     /*
