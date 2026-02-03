@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deep Soni - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+  <!-- Particle background container -->
+  <div id="particles-js"></div>
+  
+  <header>
+    <!-- Mobile header for small screens -->
+    <div class="mobile-header">
+      <span class="menu-icon" id="mobile-menu-toggle">&#9776;</span>
+      <span class="current-page">Home</span>
+    </div>
+    <!-- Mobile navigation menu (hidden by default) -->
+    <nav class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Desktop navigation for larger screens -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>  
+  
+  <main>
+    <section class="card-grid">
+      <!-- Horizontal About & Education wrapper -->
+      <div class="about-education-wrapper">
+        <a class="card about-card" href="background.html">
+          <div class="about-content">
+            <img src="images/myphoto.jpg" alt="Deep Soni" class="about-photo">
+            <h1 class="hero-name">Deep Soni</h1>
+            <h3 class="position">Data Scientist &amp; Neuroengineering Researcher</h3>
+            <p class="interests">Machine Learning | Neuroengineering | Data Science | Deep Learning | Photography | Travel | Cricket</p>
+          </div>
+        </a>
+        <a class="card education-card" href="background.html#education">
+          <div class="education-content">
+            <!-- <h3>Education</h3> -->
+            <div class="education-item">
+              <h4>MSE in Biomedical Engineering (Neuroengineering)</h4>
+              <h4 class="h4t">Johns Hopkins University, Baltimore</h4>
+              <p><span class="underline-word">Courses</span>: Machine Learning, Data Science, Deep Learning, Neural Implants & Interfaces, Neuro Data Design, ML for signal processing</p>
+            </div>
+            <div class="education-item">
+              <h4>Dual Degree - B.Tech. (Honors) in Bioengineering & M.Tech. in Biomedical Technology</h4>
+              <h4  class="h4t">Indian Institute of Technology (BHU) Varanasi</h4>
+              <p><span class="underline-word">Courses</span>: Artificial Intelligence, Signal &amp; Image Processing, Biomedical Imaging &amp; Instrumentation</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Work Experience Section -->
+      <div class="experience-wrapper section-wrapper">
+        <h2>Work Experience</h2>
+        <div class="experience-panels-wrapper">
+          <a class="card experience-card" href="work.html">
+            <div class="experience-summary">
+              <h3><span>Data Scientist</span><br><span class="text-teal">Microsoft</span></h3>
+              <ul>
+                <li>Deployed AI agents in Copilot Studio to automate learning intake & feedback workflows, reducing manual processing time by 60%.</li>
+                <li>Unified legacy tools into a single all-in-one chatbot, saving 10+ hours/week by accelerating routing, triage, and action triggers.</li>
+              </ul>
+            </div>
+          </a>
+          <a class="card experience-card" href="work.html">
+            <div class="experience-summary">
+              <h3><span>Data Scientist</span><br><span class="text-teal">Siemens Healthineers</span></h3>
+              <ul>
+                <li>Built and scaled Computer Vision pipelines for 150k+ images, cutting training time by 70% while improving detection accuracy.</li>
+                <li>Led the development of real-time analytics and visualization pipeline with the Elastic Stack + Power BI, reducing analysis time by 80% and infrastructure costs by 60%.</li>
+              </ul>
+            </div>
+          </a>
+          <a class="card experience-card" href="work.html">
+            <div class="experience-summary">
+              <h3><span>Data Science Intern</span><br><span class="text-teal">Johns Hopkins Medicine</span></h3>
+              <ul>
+                <li>Analyzed large-scale EHR data with Python/SQL to support AKI prediction and clinical decision-making.</li>
+                <li>Partnered with ED clinicians to engineer features and deliver data-driven insights for an ML-based CDS tool.</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Research Experience Section -->
+      <div class="research-wrapper section-wrapper">
+        <h2>Research Experience</h2>
+        <div class="research-panels-wrapper">
+                    <a class="card research-card" href="research.html">
+            <div class="research-summary">
+              <h3>Brain Activity Analysis using EEG-fMRI<br><span class="company text-teal">Johns Hopkins School of Medicine</span></h3>
+              <ul>
+                <li>Built a multi-modal EEG-fMRI pipeline to quantify seizure-related brain activity with robust signal processing and image preprocessing.</li>
+                <li>Applied GLM and connectivity analyses (ICA/correlation) to map activation patterns and network disruptions.</li>
+              </ul>
+            </div>
+          </a>
+          <a class="card research-card" href="research.html">
+            <div class="research-summary">
+              <h3>Brain Computer Interface<br><span class="company text-teal">IIT (BHU) Varanasi</span></h3>
+              <ul>
+                <li>Led an SSVEP-based BCI setup with OpenBCI + MATLAB, from experimental design to real-time validation.</li>
+                <li>Developed a CCA+SVM model achieving 93% accuracy and 96% specificity, improving idle-state detection.</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Projects Section -->
+      <div class="projects-wrapper section-wrapper">
+        <h2>Projects</h2>
+        <a class="card projects-card" href="projects.html">
+          <ul class="project-names">
+            <li>Neural Spike Sorting &amp; Classification</li>
+            <li>pyAutomagic - EEG Preprocessing Package</li>
+            <li>COVID-19 Global Visualization Dashboard</li>
+            <li>Healthcare Cost Prediction Dashboard</li>
+            <li>Smart Ring - Heart Activity Monitor</li>
+            <li>Gaming Controller for Quadriplegic Users</li>
+          </ul>
+          <ul class="project-names project-names-bottom">
+            <li>Analysis of Vagus Nerve Stimulation (VNS) System for Epilepsy Treatment</li>
+            <li>Detection of Pneumonia from Chest X-Ray Images Using Deep Learning</li>
+            <li>Decoding Auditory Attention from EEG Using Deep Learning</li>
+          </ul>
+        </a>
+      </div>
+      
+      <!-- Photography Section -->
+      <div class="photography-wrapper section-wrapper">
+        <h2>Photography</h2>
+        <a class="card photography-card" href="photography.html">
+          <div class="home-photo-grid" aria-label="Photography highlights">
+            <img src="images/photo1.jpeg" alt="Photography highlight 1">
+            <img src="images/photo2.jpeg" alt="Photography highlight 2">
+            <img src="images/photo3.jpeg" alt="Photography highlight 3">
+            <img src="images/photo4.jpeg" alt="Photography highlight 4">
+            <img src="images/photo5.jpeg" alt="Photography highlight 5">
+          </div>
+        </a>
+      </div>
+      
+      <!-- Contact Section -->
+      <div class="contact-wrapper section-wrapper">
+        <h2>Contact</h2>
+        <a class="card contact-card" href="contact.html">
+          <p>Get in touch and connect with me for collaborations.</p>
+        </a>
+      </div>
+      
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Deep Soni. All rights reserved.</p>
+  </footer>
+  
+  <!-- Load the particles library first, then your custom script -->
+  <script src="particles.min.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Custom Scroll Indicator -->
+  <div id="scrollbar">
+    <div id="scrollbar-dot"></div>
+  </div>
+
+</body>
+</html>
+
+
+
+

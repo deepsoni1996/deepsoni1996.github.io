@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research - Deep Soni Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+  
+  <header>
+    <!-- Mobile header for small screens -->
+    <div class="mobile-header">
+      <span class="menu-icon" id="mobile-menu-toggle">&#9776;</span>
+      <span class="current-page">Research</span>
+    </div>
+    <!-- Mobile navigation menu (hidden by default) -->
+    <nav class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Desktop navigation for larger screens -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="card-grid">
+      <div class="research-wrapper section-wrapper">
+        <h2>Research</h2>
+        <div class="card research-card">
+          <h3 class="work-title"><span class="research-role">Graduate Research Assistant</span><span class="work-dates">Aug 2020 - May 2021</span></h3>
+          <h4 class="h4t university-line">Dept. of Radiology, Johns Hopkins School of Medicine</h4>
+          <h4 class="h4t"><span class="research-title">Statistical analysis of seizure-induced brain activities using simultaneous EEG &amp; fMRI</span></h4>
+          <ul>
+            <li>Developed a comprehensive <span class="work-highlight">multi-modal data pipeline (EEG-fMRI)</span> to detect and quantify seizure-induced regional changes in Glut1-DS patients, integrating <span class="work-highlight">signal processing</span> and <span class="work-highlight">image preprocessing</span> for robust analyses.</li>
+            <li>Implemented a <span class="work-highlight">regression-based framework (GLM)</span> that incorporated fMRI images, seizure features, and physiological regressors to generate activation/deactivation maps, highlighting seizure-induced regions.</li>
+            <li>Conducted functional connectivity analyses using ICA and correlation matrices, revealing altered <span class="work-highlight">brain network connectivity</span> patterns across default mode, control, motor, and visual networks.</li>
+            <li>Demonstrated expertise in <span class="work-highlight">end-to-end data handling</span>--from EEG/fMRI artifact removal and <span class="work-highlight">feature extraction</span> to <span class="work-highlight">advanced statistical modeling &amp; visualization</span>--showcasing deep proficiency in neuroimaging and data science methods for clinical research.</li>
+          </ul>
+          <img src="images/brain.jpg" alt="EEG-fMRI brain activation maps" class="research-image">
+          </div>
+                <div class="card research-card">
+          <h3 class="work-title"><span class="research-role">Graduate Research Assistant</span><span class="work-dates">Jul 2017 - May 2019</span></h3>
+          <h4 class="h4t university-line">Indian Institute of Technology (BHU) Varanasi</h4>
+          <h4 class="h4t"><span class="research-title">Brain Computer Interface (BCI) using Machine Learning</span></h4>
+          <ul>
+            <li>Spearheaded <span class="work-highlight">lab setup and experimental design</span> for an <span class="work-highlight">SSVEP-based brain computer interface</span> using <span class="work-highlight">OpenBCI</span> equipment and custom <span class="work-highlight">MATLAB</span> scripts, ensuring reliable data acquisition and artifact reduction.</li>
+            <li>Developed and implemented a <span class="work-highlight">novel CCA+SVM algorithm</span> that <span class="work-highlight">enhanced idle-state detection</span> (96% specificity) and achieved 93% classification accuracy, surpassing conventional FFT and CCA approaches.</li>
+            <li>Oversaw <span class="work-highlight">full project lifecycle</span>, from hardware configuration and software prototyping to experiment execution, data analysis, and real-time validation on a LED control panel.</li>
+          </ul>          <div class="paper-strip">
+            <img src="images/paper1.jpg" alt="Publication figure 1">
+            <img src="images/paper2.jpg" alt="Publication figure 2">
+            <img src="images/paper3.jpg" alt="Publication figure 3">
+          </div>          <h4 class="h4t">Publication</h4>
+          <p class="publication-entry">Deep Soni, Nitesh Singh Malan, and Shiru Sharma. "CCA Model with Training Approach to Improve Recognition Rate of SSVEP in Real Time." Proceedings of the 2019 3rd International Conference on Artificial Intelligence and Virtual Reality. 2019. DOI: <a href="https://doi.org/10.1145/3348488.3348498" target="_blank" rel="noopener">https://doi.org/10.1145/3348488.3348498</a></p>
+          </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Deep Soni. All rights reserved.</p>
+  </footer>
+  
+  <script src="particles.min.js"></script>
+  <script src="script.js"></script>
+  <!-- Custom Scroll Indicator -->
+  <div id="scrollbar">
+    <div id="scrollbar-dot"></div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects - Deep Soni Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+  
+  <header>
+    <!-- Mobile header for small screens -->
+    <div class="mobile-header">
+      <span class="menu-icon" id="mobile-menu-toggle">&#9776;</span>
+      <span class="current-page">Projects</span>
+    </div>
+    <!-- Mobile navigation menu (hidden by default) -->
+    <nav class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Desktop navigation for larger screens -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="card-grid">
+      <div class="projects-wrapper section-wrapper">
+        <h2>Projects</h2>
+        <div class="project-filter" aria-label="Project filters">
+          <div class="filter-label">Filters</div>
+          <button class="tag-filter is-active" type="button" data-tag="Machine Learning">Machine Learning</button>
+          <button class="tag-filter is-active" type="button" data-tag="Data Science">Data Science</button>
+          <button class="tag-filter is-active" type="button" data-tag="Deep Learning">Deep Learning</button>
+          <button class="tag-filter is-active" type="button" data-tag="Neuroengineering">Neuroengineering</button>
+          <button class="tag-filter is-active" type="button" data-tag="Biomedical Engineering">Biomedical Engineering</button>
+        </div>
+
+        <div class="card project-card" data-tags="Machine Learning, Data Science, Neuroengineering, Biomedical Engineering">
+          <h3>Neural Spike Sorting &amp; Classification <span class="project-tools">| MATLAB, Signal Processing, PCA, k-means, kNN</span></h3>
+          <p>Built an end-to-end spike sorting pipeline for extracellular neural data, from detection to neuron-level firing reconstructions.</p>
+          <div class="project-media-row">
+            <div class="project-spike-grid" aria-label="Spike sorting visualizations">
+              <img src="images/spike1.jpg" alt="Spike waveform visualization 1">
+              <img src="images/spike2.jpg" alt="Spike waveform visualization 2">
+              <img src="images/spike3.jpg" alt="Spike waveform visualization 3">
+              <img src="images/spike4.jpg" alt="Spike waveform visualization 4">
+            </div>
+            <ul>
+              <li>Developed a complete spike sorting workflow including filtering, NEO-based spike detection, and waveform alignment.</li>
+              <li>Applied PCA to reduce spike waveform dimensions for cluster separation.</li>
+              <li>Used k-means clustering and kNN classification to identify and label distinct neuronal units.</li>
+              <li>Reconstructed neuron-specific firing patterns over time from classified spikes.</li>
+              <li>Created visualizations for spike cluster boundaries, waveform templates, and temporal firing rate dynamics.</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-tag">Data Science</span>
+            <span class="project-tag">Neuroengineering</span>
+            <span class="project-tag">Biomedical Engineering</span>
+          </div>
+        </div>
+
+        <div class="card project-card" data-tags="Neuroengineering, Biomedical Engineering">
+          <h3>Analysis of Vagus Nerve Stimulation (VNS) System for Epilepsy Treatment <span class="project-tools">| MATLAB</span></h3>
+          <p>Modeled neurostimulation mechanisms and evaluated VNS parameters for seizure control using biophysical simulations.</p>
+          <div class="project-media-row project-media-row--compact">
+            <div class="project-media-stack project-media-stack--compact" aria-label="VNS system visualizations">
+            <img src="images/vns1.gif" alt="VNS stimulation visualization 1">
+            <img src="images/vns2.jpg" alt="VNS stimulation visualization 2">
+          </div>
+          <ul>
+            <li>Built biophysically grounded neuron models using Hodgkin-Huxley dynamics to simulate seizure-induced hyperexcitability.</li>
+            <li>Modeled axonal activation under VNS using the Rattay cable model framework, generating spatiotemporal voltage surfaces along axons.</li>
+            <li>Simulated stimulus-evoked neural activation patterns under VNS parameters (frequency, pulse width, amplitude).</li>
+            <li>Conducted engineering analysis of VNS neuromodulation systems including stimulation algorithms, electrode�nerve interface engineering, and signal-driven closed-loop control designs.</li>
+            <li>Visualized firing behaviors under pathological vs. VNS-controlled conditions.</li>
+          </ul>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Neuroengineering</span>
+            <span class="project-tag">Biomedical Engineering</span>
+          </div>
+        </div>
+
+        <div class="card project-card" data-tags="Data Science, Neuroengineering, Biomedical Engineering">
+          <h3>pyAutomagic - EEG Preprocessing Package <span class="project-tools">| Python, Git, BIDS, Software Engineering, EEG</span></h3>
+          <p>Developed an EEG preprocessing toolkit in python with reproducible pipelines and QC tooling.</p>
+                    <ul>
+            <li>Led a team of 6 students to develop an EEG preprocessing <a class="inline-link" href="https://github.com/NeuroDataDesign/pyautomagic" target="_blank" rel="noopener noreferrer">library</a> inspired by the MATLAB Automagic toolbox.</li>
+            <li>Built Python scripts to read raw EEG data, implement preprocessing algorithms (filters, ICA, bad-channel detection), and write results in BIDS format.</li>
+            <li>Developed demonstration notebooks showing full preprocessing workflows and usage examples.</li>
+            <li>Integrated MATLAB routines for advanced preprocessing and compatibility, bridging both ecosystems.</li>
+            <li>Designed modules for automated QC metrics, preprocessing parameter tracking, and reproducible output generation.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="project-tag">Data Science</span>
+            <span class="project-tag">Neuroengineering</span>
+            <span class="project-tag">Biomedical Engineering</span>
+          </div>
+        </div>
+
+        <div class="card project-card" data-tags="Data Science">
+          <h3>COVID-19 Global Visualization Dashboard <span class="project-tools">| R, Shiny, flexdashboard</span></h3>
+          <p>Built a real-time analytics dashboard for global COVID-19 trends and healthcare burden.</p>
+          <div class="project-media-row project-media-row--compact">
+            <div class="project-media-stack project-media-stack--compact" aria-label="COVID-19 dashboard visualization">
+              <img src="images/covid.jpg" alt="COVID-19 dashboard visualization">
+            </div>
+            <ul>
+            <li>Built and deployed a real-time interactive <a class="inline-link" href="https://deepsoni1996.shinyapps.io/Corona-Virus-Update/" target="_blank" rel="noopener noreferrer">dashboard</a> visualizing global COVID-19 spread and trends.</li>
+            <li>Integrated APIs for real-time case counts and regional statistics.</li>
+            <li>Created visualizations for daily & overall breakdowns of cases, recoveries & deaths.</li>
+            <li>Designed UI/UX for intuitive navigation and trend comparison across countries.</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Data Science</span>
+          </div>
+        </div>
+
+        <div class="card project-card" data-tags="Machine Learning, Data Science">
+          <h3>Healthcare Cost Prediction Dashboard <span class="project-tools">| R, Machine Learning, Random Forest</span></h3>
+          <p>Developed a predictive analytics dashboard to explain cost drivers and forecast healthcare expenditures.</p>
+          <div class="project-media-row project-media-row--compact">
+            <div class="project-media-stack project-media-stack--compact" aria-label="Healthcare dashboard visualization">
+              <img src="images/health.jpg" alt="Healthcare cost dashboard visualization">
+            </div>
+            <ul>
+              <li>Built a <a class="inline-link" href="https://deepsoni1996.shinyapps.io/Health_Insurance_Analaysis/" target="_blank" rel="noopener noreferrer">dashboard</a> analyzing historical U.S. healthcare cost trends.</li>
+              <li>Implemented Random Forest models to predict expenditure trajectories based on demographic and clinical factors.</li>
+              <li>Created interpretability plots (feature importance, SHAP-like reasoning) to contextualize cost drivers.</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-tag">Data Science</span>
+          </div>
+        </div>
+
+        <div class="card project-card" data-tags="Machine Learning, Deep Learning, Data Science, Neuroengineering">
+          <h3>Decoding Auditory Attention from EEG Using Deep Learning <span class="project-tools">| Python, CNN, Neural Decoding</span></h3>
+          <p>Built a CNN-based neural decoding pipeline to infer listener attention in multi-speaker settings.</p>
+                    <ul>
+            <li>Implemented a Convolutional Neural Network (CNN) to reconstruct speech envelopes from EEG recordings.</li>
+            <li>Estimated listener attention in multi-speaker cocktail party scenarios.</li>
+            <li>Achieved 65% accuracy in attention detection for two-speaker environments.</li>
+            <li>Preprocessed EEG data for temporal alignment, filtering, and normalization to enhance neural decoding accuracy.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-tag">Deep Learning</span>
+            <span class="project-tag">Data Science</span>
+            <span class="project-tag">Neuroengineering</span>
+          </div>
+        </div>
+
+        <div class="card project-card" data-tags="Machine Learning, Deep Learning, Data Science, Biomedical Engineering">
+          <h3>Detection of Pneumonia from Chest X-Ray Images Using Deep Learning <span class="project-tools">| Python, PyTorch</span></h3>
+          <p>Trained a CNN for pneumonia detection with optimized preprocessing and interpretability checks.</p>
+                    <ul>
+            <li>Designed and trained a Convolutional Neural Network (CNN) to detect pneumonia from chest X-ray images.</li>
+            <li>Achieved 93% classification accuracy using a custom CNN pipeline with optimized layers and hyperparameters.</li>
+            <li>Performed dataset balancing, image preprocessing, and augmentation to increase sensitivity and robustness.</li>
+            <li>Evaluated and visualized class activation maps to validate model interpretability.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-tag">Deep Learning</span>
+            <span class="project-tag">Data Science</span>
+            <span class="project-tag">Biomedical Engineering</span>
+          </div>
+        </div>
+
+        <div class="card project-card" data-tags="Biomedical Engineering">
+          <h3>Smart Ring - Heart Activity Monitor <span class="project-tools">| PPG Sensor, Arduino, Biomedical Instrumentation</span></h3>
+          <p>Designed a wearable PPG-based ring for real-time heart monitoring and anomaly detection.</p>
+                    <ul>
+            <li>Developed a wearable smart ring using a PPG sensor to measure heart activity and detect anomalies.</li>
+            <li>Designed signal filtering and anomaly detection algorithms for real-time heart-rate monitoring.</li>
+            <li>Authored formal mock documentation including patent outline, invention disclosure forms, and licensing term sheets.</li>
+            <li>Conducted user testing and sensor placement analyses.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="project-tag">Biomedical Engineering</span>
+          </div>
+        </div>
+
+        <div class="card project-card" data-tags="Biomedical Engineering">
+          <h3>Gaming Controller for Quadriplegic Users <span class="project-tools">| Accelerometer, Arduino, Assistive Tech</span></h3>
+          <p>Built an assistive gaming controller that maps head motion to gameplay using an Arduino-based system.</p>
+                    <ul>
+            <li>Built a head-movement controlled gaming interface for hands-free gameplay.</li>
+            <li>Integrated accelerometer data with an Arduino-based control system to map head movements to game controls.</li>
+            <li>Achieved 2nd place in a Mario Kart competition demonstrating the controller.</li>
+            <li>Authored a mock research paper with system design diagrams, results, and justification of assistive technology principles.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="project-tag">Biomedical Engineering</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Deep Soni. All rights reserved.</p>
+  </footer>
+  
+  <script src="particles.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    (function() {
+      var filterButtons = document.querySelectorAll(".tag-filter");
+      var cards = document.querySelectorAll(".project-card");
+      var selected = new Set();
+
+      filterButtons.forEach(function(btn) {
+        selected.add(btn.dataset.tag);
+      });
+
+      function updateFilters() {
+        var hasSelection = selected.size > 0;
+        cards.forEach(function(card) {
+          var tags = (card.dataset.tags || "")
+            .split(",")
+            .map(function(t) { return t.trim(); })
+            .filter(Boolean);
+          var show = !hasSelection || tags.some(function(t) { return selected.has(t); });
+          card.style.display = show ? "" : "none";
+        });
+      }
+
+      filterButtons.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          var tag = this.dataset.tag;
+          if (selected.has(tag)) {
+            selected.delete(tag);
+            this.classList.remove("is-active");
+          } else {
+            selected.add(tag);
+            this.classList.add("is-active");
+          }
+          updateFilters();
+        });
+      });
+
+      updateFilters();
+    })();
+  </script>
+  <!-- Custom Scroll Indicator -->
+  <div id="scrollbar">
+    <div id="scrollbar-dot"></div>
+  </div>
+
+</body>
+</html>

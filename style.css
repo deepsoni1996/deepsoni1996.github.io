@@ -1,0 +1,1111 @@
+/* Import Poiret One Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+:root {
+  font-size: 17px;
+  --text-base: 1rem;
+  --text-h1: 2rem;
+  --text-h2: 1.4rem;
+  --text-h3: 1.2rem;
+  --text-h4: 1.1rem;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Electrolize', sans-serif;
+  /* font-family: 'Poiret One', sans-serif; */
+  /* font-family: 'Quantico', sans-serif; */
+  /* Increase base font size */
+  font-size: var(--text-base);
+  /* No solid background so the particle canvas can show through */
+  font-weight: 200;
+  text-shadow: 0.5px 0.5px 0 #000000;
+  background: none;
+  color: #e6e4df;
+  letter-spacing: 0.4px;
+  word-spacing: 1.5px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+@keyframes soft-fade {
+  0% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Let main content grow */
+main {
+  flex: 1;
+}
+
+/* Fade in content without affecting panel blur */
+.section-wrapper > h2,
+.card > *,
+.panel > * {
+  animation: soft-fade 320ms ease-in-out both;
+}
+
+/* Particles.js container */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  pointer-events: none;
+  z-index: -1;
+  filter: brightness(1.2) contrast(1.1);
+}
+
+/* Header / Navigation */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #e6e4df;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #1aa892;
+  font-weight: bold;
+}
+
+/* Card grid on the index page (single column, stacked vertically) */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;    /* Force one column */
+  gap: 28px;                     /* Spacing between cards */
+  padding: 120px 20px 20px;      /* Top padding to clear the header */
+  max-width: 1200px;            /* Increase container width (twice the original ~600px) */
+  margin: 0 auto;               /* Center the grid container */
+}
+
+/* Slightly narrower layout for Work, Research, and Projects pages */
+.work-wrapper,
+.research-wrapper,
+.projects-wrapper,
+.contact-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photography-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keep homepage research/projects panels aligned with wider homepage cards */
+.home .research-wrapper,
+.home .projects-wrapper {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.home .photography-wrapper {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.home .photography-card {
+  width: 100%;
+}
+
+/* Add extra spacing between stacked panels on detail pages */
+.work-wrapper .card + .card,
+.research-wrapper .card + .card,
+.projects-wrapper .card + .card {
+  margin-top: 18px;
+}
+
+.card {
+  /* Make the card fill the container width */
+  width: 100%;
+  /* Increase padding to make the card itself appear larger */
+  padding: 40px; /* twice the original 20px, for a bigger look */
+  position: relative;
+  text-align: justify;
+  /* Everything else remains the same */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px) brightness(1.2);
+  -webkit-backdrop-filter: blur(5px) brightness(1.2);
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #e6e4df;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.home .card-grid .card::after {
+  content: "Learn more \2192";
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  color: #d99b7d;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.home .card-grid .card:hover::after {
+  opacity: 0.85;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #1aa892;
+}
+
+.card h1 {
+  color: #1aa892;
+}
+
+.card-grid .card h3,
+.card-grid .card h4,
+.card-grid .card strong,
+.card-grid .card b {
+  color: #d99b7d;
+}
+
+.card-grid .card h3 {
+  font-size: var(--text-h3);
+}
+
+
+.card-grid .card h4 {
+  font-size: var(--text-h4);
+}
+
+/* Panel typography to match homepage styling */
+.panel h1 {
+  color: #1aa892;
+  font-size: var(--text-h1);
+  margin-bottom: 15px;
+}
+
+.panel h2 {
+  color: #1aa892;
+  font-size: var(--text-h2);
+  margin: 15px 0 10px;
+}
+
+.panel h3 {
+  font-size: var(--text-h3);
+}
+
+.panel h4 {
+  font-size: var(--text-h4);
+}
+
+.panel h3,
+.panel h4,
+.panel strong,
+.panel b {
+  color: #d99b7d;
+}
+
+.panel h3.h3t,
+.panel h4.h4t,
+.card-grid .card h3.h3t,
+.card-grid .card h4.h4t {
+  color: #1aa892;
+}
+
+.text-teal {
+  color: #1aa892;
+}
+
+.text-orange {
+  color: #d99b7d;
+}
+
+.underline-word {
+  text-decoration: underline;
+}
+
+
+/* Frosted glass effect for detail pages (panels) */
+.panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px) brightness(1.2);
+  -webkit-backdrop-filter: blur(5px) brightness(1.2);
+  border: none;
+  padding: 40px;
+  margin: 140px auto 40px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 10;
+}
+
+/* Photo grid for Photography page */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  margin: 16px 0 0;
+  justify-items: center;
+}
+
+.photo-grid img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 8px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 400ms ease, transform 400ms ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 1100px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 100;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .panel {
+    margin: 100px 20px;
+    padding: 20px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+/* Mobile header and navigation styling */
+.mobile-header {
+  display: none; /* Hidden by default on larger screens */
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #e6e4df;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 101;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.mobile-header .menu-icon {
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.mobile-nav {
+  display: none; /* Hidden by default */
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 50px; /* Positioned below mobile header */
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: #e6e4df;
+  text-decoration: none;
+}
+
+.mobile-nav ul li a.active {
+  color: #1aa892;
+  font-weight: bold;
+}
+
+/* Desktop navigation remains visible on larger screens */
+.desktop-nav {
+  /* Keep your existing styles for desktop nav */
+}
+
+/* Responsive adjustments: For mobile screens */
+@media (max-width: 600px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-header {
+    display: flex;
+  }
+}
+
+/* Styles for About card content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.about-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #1abc9c;
+}
+
+.about-content h3 {
+  font-size: var(--text-h3);
+  margin: 10px 0 5px;
+}
+
+.card h1.hero-name {
+  color: #2bb9a2;
+  text-shadow: 0 0 10px rgba(14, 102, 88, 0.65),
+               0 0 20px rgba(14, 102, 88, 0.35);
+}
+
+.about-content p {
+  margin: 5px 0;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.about-content .interests {
+  color: #1aa892;
+  font-weight: normal;
+}
+
+.experience-summary {
+  margin-top: 10px;
+}
+
+.experience-item h3 {
+  font-size: var(--text-h3);
+  margin: 10px 0 5px;
+}
+
+.experience-item ul {
+  list-style: disc;
+  margin-left: 20px;
+  line-height: 1.3;
+}
+
+.research-summary {
+  margin-top: 10px;
+}
+
+.research-item h3 {
+  font-size: var(--text-h3);
+  margin: 10px 0 5px;
+  line-height: 1.3;
+}
+
+.research-item .company {
+  font-weight: normal;
+  display: block;
+  font-size: 0.9em;
+  color: #1aa892;
+}
+
+.research-item ul {
+  list-style: disc;
+  margin-left: 20px;
+  line-height: 1.3;
+}
+
+.project-names {
+  list-style: disc;
+  margin: 10px 0 0 20px;
+  padding: 0;
+  line-height: 1.4;
+  columns: 2;
+  column-gap: 28px;
+}
+.project-names li {
+  margin-bottom: 5px;
+  font-size: 0.95em;
+  break-inside: avoid;
+}
+
+.project-names-bottom {
+  columns: 1;
+  margin-top: 0;
+}
+
+.home .projects-card {
+  width: 100%;
+}
+
+.project-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Reduced gap to 20px */
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto 20px auto; /* Reduced bottom margin */
+}
+
+.project-panel {
+  margin: 0 auto; /* or margin: 20px auto if you want a little space on top/bottom */
+}
+
+.project-panel h2 {
+  color: #1aa892;
+  margin-bottom: 10px;
+}
+
+.project-panel p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.project-panel ul {
+  list-style: disc;
+  margin-left: 20px;
+  line-height: 1.4;
+}
+
+/* Work page title + date alignment */
+.work-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  color: #1aa892;
+}
+
+.work-dates {
+  font-size: 1rem;
+  color: #1aa892;
+  font-weight: normal;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.work-card .work-title + ul {
+  margin-top: 18px;
+}
+
+.work-highlight {
+  color: #1aa892;
+  font-weight: 600;
+}
+
+.work-tools {
+  color: #1aa892;
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* Siemens subsection styling */
+.card-grid .work-card h4.h4t,
+.card-grid .research-card h4.h4t {
+  color: #d99b7d;
+  margin: 18px 0 10px;
+}
+
+.work-card ul + h4.h4t,
+.research-card ul + h4.h4t {
+  margin-top: 24px;
+}
+
+/* Tighten spacing between title and first subtitle on research cards */
+.research-card .work-title + .h4t {
+  margin-top: 2px !important;
+}
+
+.research-card .work-title {
+  margin-bottom: 2px !important;
+}
+
+.research-card h4.h4t {
+  margin-top: 2px !important;
+}
+
+.research-card .university-line + .h4t {
+  margin-top: 8px !important;
+}
+
+.research-card .university-line {
+  margin-bottom: 0 !important;
+  padding-bottom: 8px;
+}
+
+.research-image {
+  width: 75%;
+  height: auto;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  display: block;
+}
+
+.publication-entry a {
+  color: #1aa892;
+  text-decoration: underline;
+}
+
+.paper-strip {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.paper-strip img {
+  width: 160px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  display: block;
+}
+
+.project-tools {
+  color: #1aa892;
+  font-weight: normal;
+  font-size: 0.95em;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #d99b7d;
+  font-weight: normal;
+}
+
+.project-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 6px 0 14px;
+  padding: 14px 16px 16px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px) brightness(1.15);
+  -webkit-backdrop-filter: blur(8px) brightness(1.15);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.filter-label {
+  width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #d99b7d;
+  letter-spacing: 0.3px;
+  margin-bottom: 2px;
+}
+
+.tag-filter {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #bdb7b0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tag-filter.is-active {
+  color: #1aa892;
+  border-color: #1aa892;
+  background: rgba(26, 168, 146, 0.18);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.project-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.3px;
+  color: #cfc8c2;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: none;
+}
+
+.inline-link {
+  color: #1aa892;
+  text-decoration: underline;
+}
+
+.project-media-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 2fr;
+  gap: 44px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.project-spike-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.project-spike-grid img,
+.project-media-stack img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.project-media-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.project-media-stack--compact {
+  width: 100%;
+  justify-self: stretch;
+}
+
+.project-media-row--compact {
+  grid-template-columns: minmax(128px, 0.48fr) 2fr;
+}
+
+.card-grid .research-card h4.h4t.university-line {
+  color: #1aa892 !important;
+  font-weight: normal;
+}
+
+.card-grid .research-card .research-title {
+  color: #d99b7d !important;
+}
+
+.card-grid .research-card .research-role {
+  color: #1aa892 !important;
+}
+
+/* New wrapper for About and Education cards displayed side by side */
+.about-education-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 100%; /* Makes the wrapper span the full width of the grid cell */
+}
+
+/* Ensure each card inside the wrapper takes equal space and uses existing card styling */
+.about-education-wrapper .card {
+  flex: 1;
+}
+
+/* Common styling for the section wrappers used for Work Experience, Research, Projects, Photography, and Contact */
+.section-wrapper {
+  display: grid;
+  gap: 10px; /* Internal gap between heading and card is 10px */
+  margin-top: -10px; /* Adjusts the gap above the heading to be 10px (half the original gap) */
+}
+
+.section-wrapper h2 {
+  margin: 0;
+  font-size: 1.8em;
+  text-align: center;
+  color: #1aa892; /* Green used throughout the site */
+  text-shadow: 2px 2px 4px #333333; /* Dark gray shadow for a popping effect */
+}
+
+/* Keep background page top spacing consistent with homepage */
+.background-wrapper.section-wrapper {
+  margin-top: 0;
+}
+
+/* Offset anchor scroll for fixed header */
+#education {
+  scroll-margin-top: 120px;
+}
+
+/* Technical skills panels */
+.skills-panels-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.skill-card h3 {
+  color: #1aa892;
+  margin-bottom: 10px;
+}
+
+.skill-list {
+  list-style: disc;
+  margin-left: 20px;
+  line-height: 1.4;
+}
+
+.skill-list li {
+  margin-bottom: 6px;
+  font-size: 0.95em;
+}
+
+.skill-list-columns {
+  columns: 2;
+  column-gap: 24px;
+}
+
+.skill-list-columns li {
+  break-inside: avoid;
+}
+
+.skill-list-two-up {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+}
+
+.skill-list-two-up li {
+  flex: 1 1 45%;
+}
+
+/* Background and education horizontal panels */
+.background-panels-wrapper,
+.education-panels-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.background-panels-wrapper .card,
+.education-panels-wrapper .card {
+  flex: 1;
+}
+
+/* New container for horizontally stacked Work Experience panels */
+.experience-panels-wrapper {
+  display: flex;
+  gap: 20px;       /* Same gap as used elsewhere */
+  width: 100%;
+}
+
+/* Ensure each work experience card takes equal space */
+.experience-panels-wrapper .card {
+  flex: 1;
+}
+
+/* New container for horizontally stacked Research Experience panels */
+.research-panels-wrapper {
+  display: flex;
+  gap: 20px;       /* Same gap as used elsewhere */
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Ensure each research experience card takes equal space */
+.research-panels-wrapper .card {
+  flex: 1;
+  height: 100%;
+}
+
+/* Prevent stacked-card margin rules from offsetting the two-up layout */
+.research-panels-wrapper .card + .card {
+  margin-top: 0;
+}
+
+/* Custom Scroll Indicator Styles */
+#scrollbar {
+  position: fixed;
+  top: 120px;             /* Start at the top edge of the panels */
+  bottom: 90px;           /* End at the bottom edge of the panels */
+  right: 20px;            /* Positioned inward from the right edge */
+  width: 2px;             
+  background-color: #1abc9c;
+  opacity: 0;             /* Initially hidden */
+  transition: opacity 0.5s;
+  z-index: 101;
+}
+
+#scrollbar-dot {
+  position: absolute;
+  top: 0; /* Updated dynamically via JS */
+  left: calc(50% - 2px); /* Centers a 4px bar in a 2px-wide container */
+  transform: translateY(-50%); /* Only vertical centering */
+  width: 4px !important;
+  height: 52px !important;
+  border-radius: 2px !important;
+  background-color: #1abc9c !important;
+  border: none !important;
+  box-shadow: 0 0 6px rgba(26, 188, 156, 0.7);
+}
+
+/* Horizontal layout for larger screens */
+.about-education-wrapper,
+.experience-panels-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Ensure each card inside the wrappers takes equal space */
+.about-education-wrapper .card,
+.experience-panels-wrapper .card,
+.research-panels-wrapper .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.research-panels-wrapper .research-summary {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+/* Responsive adjustments: Stack panels vertically on mobile screens */
+@media (max-width: 600px) {
+  .about-education-wrapper,
+  .experience-panels-wrapper,
+  .research-panels-wrapper,
+  .background-panels-wrapper,
+  .education-panels-wrapper {
+    flex-direction: column;
+  }
+  .skills-panels-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .project-media-row {
+    grid-template-columns: 1fr;
+  }
+  .project-names {
+    columns: 1;
+  }
+  .project-media-row--compact .project-media-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .research-image {
+    width: 100%;
+  }
+  .paper-strip {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .paper-strip img {
+    width: 140px;
+    max-width: 140px;
+  }
+}
+
+.education-content .education-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Modal container styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 102;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: transparent;
+}
+
+.modal-panel {
+  position: relative;
+  max-width: min(92vw, 1100px);
+  margin: 110px auto 60px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr;
+  column-gap: 16px;
+  row-gap: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px) brightness(1.15);
+  -webkit-backdrop-filter: blur(10px) brightness(1.15);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Modal content image */
+.modal-content {
+  display: block;
+  width: 100%;
+  max-height: min(72vh, 720px);
+  object-fit: contain;
+  border-radius: 8px;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+}
+
+/* Close button (X) styling */
+.modal-close {
+  color: #e6e4df;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+}
+
+/* Next and previous button styling */
+.modal-prev, .modal-next {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e6e4df;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 8px;
+  user-select: none;
+}
+
+.modal-prev {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  justify-self: start;
+}
+
+.modal-next {
+  grid-column: 3;
+  grid-row: 2;
+  align-self: center;
+  justify-self: end;
+}
+
+.modal-prev:hover, .modal-next:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+body.modal-open header,
+body.modal-open main,
+body.modal-open footer {
+  visibility: hidden;
+}
+
+.photo-grid img {
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+  outline: 2px solid rgba(217, 155, 125, 0.6);
+  filter: brightness(0.9);
+}
+
+.photo-grid img.is-loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.home-photo-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
